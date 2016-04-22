@@ -1,0 +1,69 @@
+<html>
+<head>
+
+<script type="text/javascript">
+function resetform(form)
+{
+	tb.rows[1].cells[1].innerText = ""
+	tb.rows[1].cells[2].innerText = ""
+	tb.rows[1].cells[3].innerText = ""
+}
+</script>
+
+</head>
+<body style=" font-family:verdana; font-size:12px; border-style:solid; border-color:black; border-width:0px; p {line-height:15px;}; align="center"">
+<div class="login-area">
+    {% if user %}
+      {{user.name}} (<a class="login-link" href="/logout">logout</a>)
+    {% else %}
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/signup">signup</a>
+    {% endif %}
+  </div>
+<form method="post">
+
+<p><strong><font size="5">Stock Price prediction </font>
+</strong></p>
+<p>Select the company
+<select  id="company" >
+    <option name = "Yahoo" value="Yahoo">Yahoo</option>
+    <option name = "Google" value="Google">Google</option>
+    <option name = "Facebook" value="Facebook">Facebook</option>
+  </select>
+</p>
+
+<p>Select the algorithm
+<select  id="algo" >
+    <option name = "algo1" value="algo1">algo1</option>
+    <option name = "algo2" value="algo2">algo2</option>
+    <option name = "algo3"value="algo3">algo3</option>
+  </select>
+</p>
+<p>Enter the time <input id="time" type="date" name = "time" value="2017-01-13"/></p>
+
+
+<p><strong> <font size="5">Results</font></strong></p>
+
+
+<table border="1" id = "result" width="400" height="100">
+  <tr>
+    <th>time</th>
+    <th>company</th>
+    <th>algorithm</th>
+    <th>predicted value</th>
+  </tr>
+  <tr>
+  	<td>{{time}}</td>
+    <td >{{company}}</td>
+    <td >{{algorithm}}</td>
+    <td >{{value}}</td>
+  </tr>
+
+</table>
+<input type="submit">
+
+</form>
+
+</body>
+</html>
