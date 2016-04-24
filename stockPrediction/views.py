@@ -21,7 +21,6 @@ def register_user(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/stockPrediction/register_success')
-
     args = {}
     args.update(csrf(request))
 
@@ -32,3 +31,36 @@ def register_user(request):
 
 def register_success(request):
     return render_to_response('stockPrediction/register_success.html')
+
+
+def login(request):
+    c = {}
+    c.update(csrf(request))
+    return render_to_response('stockPrediction/login.html', c)
+
+
+def auth_view(request):
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    user = auth.authenticate(username=username,password=password)
+
+    if user is not None:
+        auth.login(request, user)
+        return HttpResponseRedirect('/stockPrediction/loggedin')
+    else:
+        return HttpResponseRedirect('/stockPrediction/invalid')
+
+
+def loggedin(request):
+    return render_to_response('stockPrediction/logout.html',
+                              {'full_name;': request.user.username})
+
+
+def invalid_login(request):
+    return render_to_response('stockPrediction/invalid_login.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return render_to_response('stockPrediction/login.html')
+
