@@ -52,8 +52,9 @@ def auth_view(request):
 
 
 def loggedin(request):
-    return render_to_response('stockPrediction/logout.html',
-                              {'full_name;': request.user.username})
+    print(request.user.username)
+    return render_to_response('stockPrediction/loggedin.html',
+                              {'full_name': request.user.username})
 
 
 def invalid_login(request):
@@ -62,5 +63,5 @@ def invalid_login(request):
 
 def logout(request):
     auth.logout(request)
-    return render_to_response('stockPrediction/login.html')
+    return render_to_response('stockPrediction/logout.html')
 
