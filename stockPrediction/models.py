@@ -12,6 +12,9 @@ from django.db import models
 
 class Company(models.Model):
     name = models.CharField(primary_key=True, max_length=40)
+    def toJSON(self):
+        import json
+        return json.dumps(dict([(attr, getattr(self, attr)) for attr in [f.name for f in self._meta.fields]]))
 
     # class Meta:
     #     managed = False
@@ -28,7 +31,9 @@ class Onedaystock(models.Model):
     #     managed = False
     #     db_table = 'OneDayStock'
     #     unique_together = (('name', 'time'),)
-
+    def toJSON(self):
+        import json
+        return json.dumps(dict([(attr, getattr(self, attr)) for attr in [f.name for f in self._meta.fields]]))
 
 class Oneyearstock(models.Model):
     name = models.ForeignKey(Company, models.DO_NOTHING, db_column='name')
@@ -38,7 +43,9 @@ class Oneyearstock(models.Model):
     open = models.FloatField()
     pricelow = models.FloatField()
     close = models.FloatField()
-
+    def toJSON(self):
+        import json
+        return json.dumps(dict([(attr, getattr(self, attr)) for attr in [f.name for f in self._meta.fields]]))
 #     class Meta:
 #         managed = False
 #         db_table = 'OneYearStock'

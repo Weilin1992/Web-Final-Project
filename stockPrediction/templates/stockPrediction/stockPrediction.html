@@ -9,19 +9,18 @@ function resetform(form)
 	tb.rows[1].cells[3].innerText = ""
 }
 </script>
-
+{%  block content %}
 </head>
-<body style=" font-family:verdana; font-size:12px; border-style:solid; border-color:black; border-width:0px; p {line-height:15px;}; align="center"">
+<body>
 <div class="login-area">
     {% if user %}
-      {{user.name}} (<a class="login-link" href="/logout">logout</a>)
+      {{user.username}} (<a class="login-link" href="/stockPrediction/logout/">logout</a>)
     {% else %}
-      <a class="login-link" href="/login">login</a>
-      |
-      <a class="login-link" href="/signup">signup</a>
+      <a class="login-link" href="/stockPrediction/login/">login</a>
+      <a class="login-link" href="/stockPrediction/register/">register</a>
     {% endif %}
   </div>
-<form method="post">
+<form action="" method="post"> {% csrf_token %}
 
 <p><strong><font size="5">Stock Price prediction </font>
 </strong></p>
@@ -66,4 +65,6 @@ function resetform(form)
 </form>
 
 </body>
+{% endblock %}
+
 </html>
