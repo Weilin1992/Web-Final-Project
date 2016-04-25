@@ -15,7 +15,6 @@ from django.contrib import  auth
 from django.contrib.auth.forms import UserCreationForm
 import json
 import collections
-from .DateTime import DateTimeEncoder
 from datetime import date
 from django import forms
 
@@ -86,13 +85,14 @@ def stock_apple_test_json(request):
         d['price'] = row.price
         d['volume'] = row.volume
         rowlist.append(d)
-    j = json.dumps(rowlist,cls=DateTimeEncoder)
+    j = json.dumps(rowlist)
     print j
     return HttpResponse(j,content_type='application/json',)
 
 class stockPredictForm(forms.Form):
     company = forms.Select()
     time = forms.DateField('%Y-%m-%d',label='time')
+
 
 
 
