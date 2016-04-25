@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
 from .models import Company
 from .models import Oneyearstock
 from .models import Onedaystock
@@ -13,16 +15,9 @@ from django.contrib import  auth
 from django.contrib.auth.forms import UserCreationForm
 import json
 import collections
-import datetime
-
-class DateTimeEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, datetime.datetime):
-            encoded_object = list(obj.timetuple())[0:6]
-        else:
-            encoded_object =json.JSONEncoder.default(self, obj)
-        return encoded_object
-
+from .DateTime import DateTimeEncoder
+from datetime import date
+from django import forms
 
 def index(request):
     company_name = Company.objects.order_by("name")
@@ -77,35 +72,51 @@ def logout(request):
     auth.logout(request)
     return render_to_response('stockPrediction/logout.html')
 
-
 def test_json(request):
     return JsonResponse({1:2})
 
 
 def stock_apple_test_json(request):
-    company_name = 'GOOG'
-    #result = (Oneyearstock.objects.raw('SELECT time,name,price FROM stockPrediction_oneyearstock WHERE name = "YHOO" '))
-    result = Onedaystock.objects.filter(name='YHOO')
+    result = (Onedaystock.objects.raw('SELECT * FROM stockPrediction_onedaystock WHERE name = "YHOO" '))
     rowlist = []
     for row in result:
         d = collections.OrderedDict()
-        d["time"] = row.time
+        d["time"] = str(row.time)
         d['name'] = 'YHOO'
         d['price'] = row.price
         d['volume'] = row.volume
         rowlist.append(d)
     j = json.dumps(rowlist,cls=DateTimeEncoder)
     print j
-    return JsonResponse(j,safe=False)
+    return HttpResponse(j,content_type='application/json',)
 
+class stockPredictForm(forms.Form):
+    company = forms.Select()
+    time = forms.DateField('%Y-%m-%d',label='time')
+
+
+
+
+@csrf_exempt
 def stock_prediction(request):
+
+
     if(request.method == 'POST'):
-        print 'Post'
+        #strategy = request.GET['company']
+        time = request.POST.get('time')
+        company_name = request.POST.get('company')
+        print(company_name)
+        return render_to_response('stockPrediction/stockPrediction.html',{'time':time,
+                                  'user':request.user}
+                                  )
     else:
+        time = str(date.today())
         print request.user.username
         return render_to_response(
             'stockPrediction/stockPrediction.html',
-                {'user': request.user}
+                {'user': request.user,
+                 'time':time,
+                 }
         )
 
 

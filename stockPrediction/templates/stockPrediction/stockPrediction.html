@@ -20,12 +20,12 @@ function resetform(form)
       <a class="login-link" href="/stockPrediction/register/">register</a>
     {% endif %}
   </div>
-<form action="" method="post"> {% csrf_token %}
+<form action="" method="post">
 
 <p><strong><font size="5">Stock Price prediction </font>
 </strong></p>
 <p>Select the company
-<select  id="company" >
+<select  id="company" name = "company">
     <option name = "Yahoo" value="Yahoo">Yahoo</option>
     <option name = "Google" value="Google">Google</option>
     <option name = "Facebook" value="Facebook">Facebook</option>
@@ -33,13 +33,13 @@ function resetform(form)
 </p>
 
 <p>Select the algorithm
-<select  id="algo" >
+<select  id="algo" name="algo" >
     <option name = "algo1" value="algo1">algo1</option>
     <option name = "algo2" value="algo2">algo2</option>
     <option name = "algo3"value="algo3">algo3</option>
   </select>
 </p>
-<p>Enter the time <input id="time" type="date" name = "time" value="2017-01-13"/></p>
+<p>Enter the time <input id="time" type="date" name = "time" value={{time}}></p>
 
 
 <p><strong> <font size="5">Results</font></strong></p>
