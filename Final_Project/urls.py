@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^stockPrediction/', include('stockPrediction.urls')),
+    url(r'^api/', include('api.urls')),
     url(r'^admin/', admin.site.urls),
 ]
