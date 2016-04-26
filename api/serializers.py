@@ -7,14 +7,15 @@ class CompanySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Company
-        fields = ('name',)
+        fields = ('id','name',)
 
 
 class OneyearstockSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Oneyearstock
-        fields = ('name',
+        fields = ('id',
+                  'name',
                   'time',
                   'open',
                   'close',
@@ -28,6 +29,7 @@ class OnedaystockSerializer(serializers.ModelSerializer):
     class Meta:
         model = Onedaystock
         field = (
+            'id',
             'name',
             'time',
             'price',
