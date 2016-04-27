@@ -9,6 +9,7 @@ import collections
 from stockPrediction.models import *
 from .serializers import *
 
+from prediction import *
 
 
 # Create your views here.
@@ -91,4 +92,55 @@ def lesserthan(request):
         d["name"] = row[1]
         rowlist.append(d)
     return Response(rowlist)
+
+@api_view(['GET'])
+def indicator(request):
+    company_name = str(request.GET.get('name'))
+    indicatorname = str(request.GET.get('indicator'))
+    min_or_days = str(request.GET.get('timescale'))
+    print min_or_days
+    rowlist = indicatorCalculate(company_name, indicatorname, min_or_days)
+    return Response(rowlist)
+
+@api_view(['GET'])
+def dayPrediction(request):
+    company_name = str(request.GET.get('name'))
+    strategy = str(request.GET.get('strategy'))
+    days = int(request.GET.get('days'))
+    rowlist = daystockPrediction(company_name, strategy, days)
+    return Response(rowlist)
+
+@api_view(['GET'])
+def minPrediction(request):
+    company_name = str(request.GET.get('name'))
+    strategy = str(request.GET.get('strategy'))
+    minutes = int(request.GET.get('minutes'))
+    rowlist = minstockPrediction(company_name,strategy,minutes)
+
+    return Response(rowlist)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

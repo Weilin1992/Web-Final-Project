@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24ea74c9-2889-436c-aea4-e821604e0427" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/prediction.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stockPrediction/prediction.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Final_Project/settings.py" afterPath="$PROJECT_DIR$/Final_Project/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/urls.py" afterPath="$PROJECT_DIR$/api/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/views.py" afterPath="$PROJECT_DIR$/api/views.py" />
     </list>
@@ -35,54 +39,16 @@
     <favorites_list name="Final_Project" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.86903554">
+    <splitter split-orientation="horizontal" split-proportion="0.49932706">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Final_Project/settings.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/api/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+                  <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/api/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.79498863">
-                  <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#554#752#0" expanded="false" />
-                    <element signature="e#803#999#0" expanded="false" />
-                    <element signature="e#1057#1341#0" expanded="false" />
-                    <element signature="e#1397#1774#0" expanded="false" />
-                    <element signature="e#1826#2197#0" expanded="false" />
-                    <element signature="e#2248#2569#0" expanded="false" />
-                    <element signature="e#2619#3190#0" expanded="false" />
-                    <marker date="1461651284000" expanded="true" signature="1092:1134" placeholder="select * fro... stockPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="1092:1201" placeholder="select * fro... stockPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="1535:1578" placeholder="select * fro... stcokPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="1535:1626" placeholder="select * fro... stcokPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="1535:1655" placeholder="select * fro... stockPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="1923:1990" placeholder="select avg(c... stockPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="2297:2367" placeholder="select min(c... stockPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="2716:2783" placeholder="select min(c... stockPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="2854:2949" placeholder="select id,na... stockPrediction_oneyearstock" />
-                    <marker date="1461651284000" expanded="true" signature="2854:2984" placeholder="select DISTI... stockPrediction_oneyearstock" />
                   </folding>
                 </state>
               </provider>
@@ -108,11 +74,26 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="prediction.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/api/prediction.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.95286196">
+                  <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                    <marker date="1461723210000" expanded="true" signature="840:896" placeholder="select * fro... stockPrediction_oneyearstock" />
+                    <marker date="1461723210000" expanded="true" signature="1438:1493" placeholder="select * fro... stockPrediction_onedaystock" />
+                    <marker date="1461723210000" expanded="true" signature="2368:2423" placeholder="select * fro... stockPrediction_onedaystock" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Final_Project/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                  <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding>
                     <element signature="e#646#686#0" expanded="true" />
                   </folding>
@@ -140,49 +121,10 @@
             <entry file="file://$PROJECT_DIR$/stockPrediction/urls.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+                  <caret line="14" column="8" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/stockPrediction/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="89" column="56" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="59" />
-                  <folding>
-                    <element signature="e#620#748#0" expanded="false" />
-                    <element signature="e#1395#1751#0" expanded="false" />
-                    <element signature="e#1781#1940#0" expanded="false" />
-                    <element signature="e#1975#2038#0" expanded="false" />
-                    <element signature="e#2066#2147#0" expanded="false" />
-                    <element signature="e#2177#2203#0" expanded="false" />
-                    <element signature="e#2849#3482#0" expanded="false" />
-                    <marker date="1461627244000" expanded="true" signature="2281:2342" placeholder="SELECT * FRO... stockPrediction_onedaystock" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/stockPrediction/models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.546697">
-                  <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="0001_initial.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/stockPrediction/migrations/0001_initial.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -194,6 +136,29 @@
                   <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/api/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.37878788">
+                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#35#0" expanded="true" />
+                    <element signature="e#579#777#0" expanded="false" />
+                    <element signature="e#828#1024#0" expanded="false" />
+                    <element signature="e#1082#1366#0" expanded="false" />
+                    <element signature="e#1851#2222#0" expanded="false" />
+                    <element signature="e#2273#2594#0" expanded="false" />
+                    <marker date="1461723007000" expanded="true" signature="1117:1226" placeholder="select * fro... stockPrediction_oneyearstock" />
+                    <marker date="1461723007000" expanded="true" signature="1560:1680" placeholder="select * fro... stockPrediction_oneyearstock" />
+                    <marker date="1461723007000" expanded="true" signature="1948:2013" placeholder="select avg(c... stockPrediction_oneyearstock" />
+                    <marker date="1461723007000" expanded="true" signature="2322:2392" placeholder="select min(c... stockPrediction_oneyearstock" />
+                    <marker date="1461723007000" expanded="true" signature="2741:2806" placeholder="select min(c... stockPrediction_oneyearstock" />
+                    <marker date="1461723007000" expanded="true" signature="2879:3007" placeholder="select DISTI... stockPrediction_oneyearstock" />
                   </folding>
                 </state>
               </provider>
@@ -241,13 +206,15 @@
         <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/predict.html" />
         <option value="$PROJECT_DIR$/stockPrediction/prediction.py" />
         <option value="$PROJECT_DIR$/stockPrediction/views.py" />
-        <option value="$PROJECT_DIR$/Final_Project/settings.py" />
         <option value="$PROJECT_DIR$/stockPrediction/urls.py" />
         <option value="$PROJECT_DIR$/Final_Project/urls.py" />
         <option value="$PROJECT_DIR$/stockPrediction/models.py" />
         <option value="$PROJECT_DIR$/api/serializers.py" />
+        <option value="$PROJECT_DIR$/Final_Project/settings.py" />
+        <option value="$PROJECT_DIR$/api/pridiction.py" />
         <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/api/views.py" />
+        <option value="$PROJECT_DIR$/api/prediction.py" />
       </list>
     </option>
   </component>
@@ -257,8 +224,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="987" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -285,6 +253,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,7 +269,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Final_Project" />
+              <option name="myItemId" value="Web-Final-Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -309,7 +279,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Final_Project" />
+              <option name="myItemId" value="Web-Final-Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -323,39 +293,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Final_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stockPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="indicator and datacollect" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Final_Project" />
+              <option name="myItemId" value="Web-Final-Project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -363,10 +301,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web-Final-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,7 +324,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -740,17 +689,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20678514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23972602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36202186" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30657747" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -816,14 +765,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stockPrediction/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1075,13 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stockPrediction/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1103,34 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1141,41 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_Project/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#646#686#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="56" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="59" />
-          <folding>
-            <element signature="e#620#748#0" expanded="false" />
-            <element signature="e#1395#1751#0" expanded="false" />
-            <element signature="e#1781#1940#0" expanded="false" />
-            <element signature="e#1975#2038#0" expanded="false" />
-            <element signature="e#2066#2147#0" expanded="false" />
-            <element signature="e#2177#2203#0" expanded="false" />
-            <element signature="e#2849#3482#0" expanded="false" />
-            <marker date="1461627244000" expanded="true" signature="2281:2342" placeholder="SELECT * FRO... stockPrediction_onedaystock" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.546697">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_Project/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1183,29 +1054,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indicator and datacollect/webFinalIndicator.py">
+    <entry file="file://$PROJECT_DIR$/stockPrediction/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Final_Project/settings.py">
+    <entry file="file://$PROJECT_DIR$/api/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1217,28 +1077,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Final_Project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#646#686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indicator and datacollect/webFinalIndicator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockPrediction/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55284554">
+          <caret line="89" column="56" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="59" />
+          <folding>
+            <element signature="e#620#748#0" expanded="false" />
+            <element signature="e#1395#1751#0" expanded="false" />
+            <element signature="e#1781#1940#0" expanded="false" />
+            <element signature="e#1975#2038#0" expanded="false" />
+            <element signature="e#2066#2147#0" expanded="false" />
+            <element signature="e#2177#2203#0" expanded="false" />
+            <element signature="e#2849#3482#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockPrediction/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83739835">
+          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockPrediction/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="8" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Final_Project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22865854">
+          <caret line="60" column="63" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95286196">
+          <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1461723210000" expanded="true" signature="840:896" placeholder="select * fro... stockPrediction_oneyearstock" />
+            <marker date="1461723210000" expanded="true" signature="1438:1493" placeholder="select * fro... stockPrediction_onedaystock" />
+            <marker date="1461723210000" expanded="true" signature="2368:2423" placeholder="select * fro... stockPrediction_onedaystock" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79498863">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.37878788">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#554#752#0" expanded="false" />
-            <element signature="e#803#999#0" expanded="false" />
-            <element signature="e#1057#1341#0" expanded="false" />
-            <element signature="e#1397#1774#0" expanded="false" />
-            <element signature="e#1826#2197#0" expanded="false" />
-            <element signature="e#2248#2569#0" expanded="false" />
-            <element signature="e#2619#3190#0" expanded="false" />
-            <marker date="1461651284000" expanded="true" signature="1092:1134" placeholder="select * fro... stockPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="1092:1201" placeholder="select * fro... stockPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="1535:1578" placeholder="select * fro... stcokPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="1535:1626" placeholder="select * fro... stcokPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="1535:1655" placeholder="select * fro... stockPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="1923:1990" placeholder="select avg(c... stockPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="2297:2367" placeholder="select min(c... stockPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="2716:2783" placeholder="select min(c... stockPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="2854:2949" placeholder="select id,na... stockPrediction_oneyearstock" />
-            <marker date="1461651284000" expanded="true" signature="2854:2984" placeholder="select DISTI... stockPrediction_oneyearstock" />
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#579#777#0" expanded="false" />
+            <element signature="e#828#1024#0" expanded="false" />
+            <element signature="e#1082#1366#0" expanded="false" />
+            <element signature="e#1851#2222#0" expanded="false" />
+            <element signature="e#2273#2594#0" expanded="false" />
+            <marker date="1461723007000" expanded="true" signature="1117:1226" placeholder="select * fro... stockPrediction_oneyearstock" />
+            <marker date="1461723007000" expanded="true" signature="1560:1680" placeholder="select * fro... stockPrediction_oneyearstock" />
+            <marker date="1461723007000" expanded="true" signature="1948:2013" placeholder="select avg(c... stockPrediction_oneyearstock" />
+            <marker date="1461723007000" expanded="true" signature="2322:2392" placeholder="select min(c... stockPrediction_oneyearstock" />
+            <marker date="1461723007000" expanded="true" signature="2741:2806" placeholder="select min(c... stockPrediction_oneyearstock" />
+            <marker date="1461723007000" expanded="true" signature="2879:3007" placeholder="select DISTI... stockPrediction_oneyearstock" />
           </folding>
         </state>
       </provider>
