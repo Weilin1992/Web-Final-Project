@@ -30,7 +30,6 @@ def daystockPrediction(company_name,strategy,days):
 
     return rowlist
 
-
 def minstockPrediction(company_name,strategy,minutes):
     """
     almost the same with daystockPrediction
