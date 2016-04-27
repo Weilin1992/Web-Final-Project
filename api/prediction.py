@@ -1,6 +1,6 @@
 import collections
 from stockPrediction.models import *
-
+from .machinel import *
 from django.db import connection
 
 
@@ -18,16 +18,17 @@ def daystockPrediction(company_name,strategy,days):
     stock price and the next 5 days price
     """
     rowlist = []
-    cursor = connection.cursor()
-    cursor.execute('select * from stockPrediction_oneyearstock where name = %s',[company_name])
-    for row in cursor.fetchall():
-        d = collections.OrderedDict()
-        #d["id"] = row[0]
-        d["name"] = company_name
-        d["pirce"] = row[4]
-        d["time"] = row[2]
-        rowlist.append(d)
-
+    # cursor = connection.cursor()
+    # cursor.execute('select * from stockPrediction_oneyearstock where name = %s',[company_name])
+    # for row in cursor.fetchall():
+    #     d = collections.OrderedDict()
+    #     #d["id"] = row[0]
+    #     d["name"] = company_name
+    #     d["pirce"] = row[4]
+    #     d["time"] = row[2]
+    #     rowlist.append(d)
+    rowlist = getRows(strategy, company_name, 'close')
+#    print rowlist
     return rowlist
 
 def minstockPrediction(company_name,strategy,minutes):
