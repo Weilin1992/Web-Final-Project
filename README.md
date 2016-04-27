@@ -23,7 +23,7 @@
 	python manage.py runserver
 
 
-##1.api:Django rest framework:
+##1.api: Django rest framework:
   
 we use [django rest framework](http://www.django-rest-framework.org) to define api  
   
