@@ -2,6 +2,7 @@ from django.conf.urls import patterns,url
 from . import views
 
 urlpatterns = [
+    url(r'^realTime/$',views.realTime,name='realTime'),
     url(r'^dayPrediction/$',views.dayPrediction,name='dayPrediction'),
     url(r'^minPrediction/$',views.minPrediction,name='minPrediction'),
     url(r'^indicator/$',views.indicator,name='indicator'),

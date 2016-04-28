@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from django.db import connection
 import json
 import collections
+from yahoo_finance import Share
 
 from stockPrediction.models import *
 from .serializers import *
@@ -118,6 +119,26 @@ def minPrediction(request):
     rowlist = minstockPrediction(company_name,strategy,minutes)
 
     return Response(rowlist)
+
+@api_view(['GET'])
+def realTime(request):
+    company_name = str(request.GET.get('name'))
+    stock = Share(company_name)
+    rowlist = []
+    d = collections.OrderedDict()
+    cursor = connection.cursor()
+    cursor.execute('select max(id) from stockPrediction_onedaystock')
+    idd = cursor.fetchone()[0]
+    print idd
+    d["id"] = idd
+    d["time"] = datetime.now()
+    d["price"] = stock.get_price()
+    d["volume"] = stock.get_volume()
+    rowlist.append(d)
+    return Response(rowlist)
+
+
+
 
 
 
