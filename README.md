@@ -48,7 +48,15 @@ we use [django rest framework](http://www.django-rest-framework.org) to define a
 	(7)minstockPrediction  
 	http://127.0.0.1:8000/api/minPrediction/?name=YHOO&strategy=xxx&minutes=5  
 
-
+    (8)realtime query
+    http://127.0.0.1:8000/api/realTime/?name=YHOO
+    
+    (9)onedaystock
+    http://127.0.0.1:8000/api/onedaystock/?name=YHOO
+    
+    (10)oneyearstock
+    http://127.0.0.1:8000/api/oneyearstock/?name=YHOO
+    
 ##2.prediction api:  
 in api/prediction:  
 
