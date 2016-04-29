@@ -3,7 +3,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^deeplink/$',views.deeplink,name='deeplink'),
+    url(r'^query/$',views.query,name = 'query'),
     url(r'^stocktestjson/$',views.stock_apple_test_json, name='stock_apple_test_json'),
     url(r'^stockPrediction/$',views.stock_prediction, name='stock_prediction'),
     url(r'^test_json/$',views.test_json, name='test_json'),

@@ -38,9 +38,9 @@
 		
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<ul class="nav menu">
-			<li class="active"><a href="index.html"><span class="glyphicon glyphicon-stats"></span> Stock Prediction</a></li>
+			<li class="active"><a href="/stockPrediction/stockPrediction/"><span class="glyphicon glyphicon-stats"></span> Stock Prediction</a></li>
 			<li><a href="/stockPrediction/query/"><span class="glyphicon glyphicon-tasks"></span> stock manage</a></li>
-			<li><a href="charts.html"><span class="glyphicon glyphicon-user"></span> user info</a></li>
+
 			<li role="presentation" class="divider"></li>
 			<li><a href="login.html"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
 		</ul>
@@ -519,7 +519,7 @@
 			
 
             title : {
-                text : 'AAPL Stock Price'
+                text : name+' Stock Price'
             },
             xAxis: {
                 type: 'datetime'
@@ -537,7 +537,20 @@
             },
             
 			rangeSelector : {
-				selected : 1
+				buttons: [{
+                        count: 10,
+                        type: 'minute',
+                        text: '10m'
+                    }, {
+                        count: 1,
+                        type: 'hour',
+                        text: '1h'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
+				inputEnabled: false,
+				selected : 2
 			},
     
             legend: {
@@ -563,21 +576,21 @@
                 data : res,
                 
             },{
-                name: '15-day SMA',
+                name: 'trendline',
                 linkedTo: 'primary',
                 showInLegend: true,
                 type: 'trendline',
                 algorithm: 'linear',
                 
             }, {
-                name: '15-day SMA',
+                name: 'SMA',
                 linkedTo: 'primary',
                 showInLegend: true,
                 type: 'trendline',
                 algorithm: 'SMA',
                 periods: 15
             }, {
-                name: '40-day EMA',
+                name: 'EMA',
                 linkedTo: 'primary',
                 showInLegend: true,
                 type: 'trendline',
@@ -688,7 +701,7 @@
 			},
 			yAxis: {
 				title: {
-					text: 'Snow depth (m)'
+					text: 'Price'
 				},
 				min: 0
 			},
@@ -706,7 +719,7 @@
 			},
 
 			series: [{
-				name: 'SVM',
+				name: 'ANN',
 				// Define the data points. All series have a dummy year
 				// of 1970/71 in order to be compared on the same x axis. Note
 				// that in JavaScript, months start at 0 for January, 1 for February etc.

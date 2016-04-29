@@ -23,17 +23,18 @@ def index(request):
     out = ', '.join([c.name for c in company_name])
     return HttpResponse(out)
 
+def query(request):
+    return render_to_response('stockPrediction/query.html')
+
 def register_user(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            print "test"
             form.save()
             return HttpResponseRedirect('/stockPrediction/register_success')
     args = {}
     args.update(csrf(request))
     args['form'] = UserCreationForm()
-    print args['form']
     return render_to_response('stockPrediction/register.html',args)
 
 
@@ -54,7 +55,7 @@ def auth_view(request):
 
     if user is not None:
         auth.login(request, user)
-        return HttpResponseRedirect('/stockPrediction/stockPrediction')
+        return HttpResponseRedirect('/stockPrediction/loggedin')
     else:
         return HttpResponseRedirect('/stockPrediction/invalid')
 
@@ -102,6 +103,7 @@ class stockPredictForm(forms.Form):
 @csrf_exempt
 def stock_prediction(request):
 
+
     if(request.method == 'POST'):
         #strategy = request.GET['company']
         time = request.POST.get('time')
@@ -121,13 +123,5 @@ def stock_prediction(request):
         )
 
 
-def deeplink(request):
 
-    name = str(request.GET.get('name'))
 
-    if name == 'uber':
-        return HttpResponse("uber://")
-    elif name == 'facebook':
-        return HttpResponse("fb://page/")
-
-    return HttpResponse("fb://page/")
