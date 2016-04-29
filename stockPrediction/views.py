@@ -33,6 +33,7 @@ def register_user(request):
     args = {}
     args.update(csrf(request))
     args['form'] = UserCreationForm()
+    print args['form']
     return render_to_response('stockPrediction/register.html',args)
 
 
@@ -53,7 +54,7 @@ def auth_view(request):
 
     if user is not None:
         auth.login(request, user)
-        return HttpResponseRedirect('/stockPrediction/loggedin')
+        return HttpResponseRedirect('/stockPrediction/stockPrediction')
     else:
         return HttpResponseRedirect('/stockPrediction/invalid')
 
