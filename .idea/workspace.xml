@@ -144,8 +144,8 @@
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.40969163">
-                <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+              <first_editor vertical-scroll-proportion="0.23127754">
+                <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -694,7 +694,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461906221496</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="change host name in readme.md">
+      <created>1461906374535</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1461906374535</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -763,7 +769,8 @@
     <MESSAGE value="add another api" />
     <MESSAGE value="database rename" />
     <MESSAGE value="change host name" />
-    <option name="LAST_COMMIT_MESSAGE" value="change host name" />
+    <MESSAGE value="change host name in readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="change host name in readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1209,8 +1216,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.40969163">
-            <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <first_editor vertical-scroll-proportion="0.23127754">
+            <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />
