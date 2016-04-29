@@ -29,6 +29,7 @@ def daystockPrediction(company_name,strategy,days):
     #     rowlist.append(d)
     rowlist = getRows(strategy, company_name, 'close')
 #    print rowlist
+    #print "SVM"
     return rowlist
 
 def minstockPrediction(company_name,strategy,minutes):

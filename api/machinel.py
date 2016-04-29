@@ -50,7 +50,7 @@ def SVM(name, attr):
 
 	return (final, relaterror)
 
-SVM('YHOO', 'close')
+#SVM('YHOO', 'close')
 
 def getSamplesL(name, attr, attr2 = 'volume', n = 20, long = 5):
     cursor = connection.cursor()
@@ -136,9 +136,10 @@ def BCF(name, attr, l = 20):
 	print error
 	print resultf[0]
 	return (resultf[0], error)
-BCF('YHOO', 'close')
+#BCF('YHOO', 'close')
 
 def getRows(s, n, attr):
+    print s
     if s == 'SVM':
         cursor = connection.cursor()
         cursor.execute('select %s,%s,%s from stockPrediction_oneyearstock where name = "%s"' % ('name', attr, 'time', n))
@@ -153,8 +154,9 @@ def getRows(s, n, attr):
         d = collections.OrderedDict()
         d["name"] = n
         d["price"] = result[0][0]
+        print rowlist[0]["time"]
         interval = timedelta(1)
-        d["time"] = rowlist[0]["time"] + interval
+        d["time"] = date.today() + interval
         print d
         r = [d]
 
@@ -176,7 +178,8 @@ def getRows(s, n, attr):
         d["name"] = n
         d["price"] = result[0][0]
         interval = timedelta(1)
-        d["time"] = rowlist[0]["time"] + interval
+        print rowlist[0]["time"]
+        d["time"] = date.today() + interval
         r = [d]
         return r + rowlist
 
@@ -197,7 +200,7 @@ def getRows(s, n, attr):
             d["name"] = n
             d["price"] = result[0][i]
             interval = timedelta(1)
-            d["time"] = rowlist[0]["time"] + interval
+            d["time"] = date.today() + interval
             r = [d]
             rowlist = r + rowlist
         return rowlist

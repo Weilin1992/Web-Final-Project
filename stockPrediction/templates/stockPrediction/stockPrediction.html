@@ -35,18 +35,18 @@
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
-
+		
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<ul class="nav menu">
 			<li class="active"><a href="index.html"><span class="glyphicon glyphicon-stats"></span> Stock Prediction</a></li>
-			<li><a href="widgets.html"><span class="glyphicon glyphicon-tasks"></span> stock manage</a></li>
+			<li><a href="/stockPrediction/query/"><span class="glyphicon glyphicon-tasks"></span> stock manage</a></li>
 			<li><a href="charts.html"><span class="glyphicon glyphicon-user"></span> user info</a></li>
 			<li role="presentation" class="divider"></li>
-			<li><a href="/stockPrediction/login/"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
-
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
@@ -55,35 +55,41 @@
 		</div><!--/.row-->
 
 		<div class="row row-margin-top">
-			<div class="col-xs-12 col-md-6">
-				<div class="col-md-6 panel-widget">
+			<div class="col-xs-12 col-md-9">
+				<div class="col-md-5 panel-widget">
 					<div class="row no-padding">
 						<div class="col-lg-12 widget-right">
 							<div class="large">SELECT THE STOCK</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-7">
 					<select id = "stock-select"  class="form-control">
 						<option>YHOO</option>
 						<option>APPL</option>
-						<option>MICRO</option>
 						<option>GOOG</option>
+						<option>AMZN</option>
+						<option>MSFT</option>
+						<option>BAC</option>
+						<option>FB</option>
+						<option>V</option>
+						<option>BX</option>
+						<option>BA</option>
 					</select>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<button type="button" class="btn btn-default btn-lg btn-outline pull-right margin">REFRESH</button>
+			<div class="col-md-3">
+				<button type="button" class="btn btn-default btn-lg btn-outline pull-right margin" onclick='showData("todaydata");onePrediction();fivePrediction()'>REFRESH</button>
 			</div>
 
 		</div>
-
+		
 		<div class="row col-no-gutter-container row-margin-top">
 			<div class="col-lg-12 col-no-gutter">
 				<div class="panel panel-default">
 					<ul class="nav nav-tabs">
-						<li id = "info1" ><a data-toggle="tab" href="#tab1">TODAY</a></li>
-						<li id = "info2" class="active"><a data-toggle="tab" href="#tab2">HISTORY</a></li>
+						<li id = "info1" class="active"><a data-toggle="tab" href="#tab1" onclick='showData("todaydata")'>TODAY</a></li>
+						<li id = "info2" ><a data-toggle="tab" href="#tab2" onclick='showData("hisdata")'>HISTORY</a></li>
 					</ul>
 					<div class="panel-body">
 						<div class="canvas-wrapper">
@@ -93,7 +99,7 @@
 				</div>
 			</div>
 		</div><!--/.row-->
-
+		
 		<div class="row row-no-gutter col-no-gutter-container">
 			<div class="col-md-4 col-no-gutter">
 				<div class="panel panel-default">
@@ -105,7 +111,7 @@
 					</div>
 				</div>
 			</div><!--/.col-->
-
+			
 			<div class="col-md-8 col-no-gutter">
 				<div class="panel panel-default">
 					<div class="panel-heading">5days predicion</div>
@@ -117,7 +123,7 @@
 				</div>
 			</div><!--/.col-->
 		</div><!--/.row-->
-
+		
 
 	</div>	<!--/.main-->
 
@@ -129,6 +135,10 @@
 	<script src="{{STACTIC_URL}}/static/js/easypiechart-data.js"></script>
 	<script src="{{STACTIC_URL}}/static/js/bootstrap-datepicker.js"></script>
 	<script src="{{STACTIC_URL}}/static/js/custom.js"></script>
+    <script src="{{STACTIC_URL}}/static/js/highstock.src.js"></script>
+    <script src="{{STACTIC_URL}}/static/js/indicators.js"></script>
+    <script src="{{STACTIC_URL}}/static/js/sma.js"></script>
+    <script src="{{STACTIC_URL}}/static/js/ema.js"></script>
 	<script src="https://code.highcharts.com/stock/highstock.js"></script>
 	<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 	<script src= "https://rawgit.com/laff/technical-indicators/master/technical-indicators.src.js"></script>
@@ -331,19 +341,30 @@
 			},
 			exporting: {
 				enabled: false
-			}
+			},
+            credits: {
+                enabled: false
+            }
 		});
-		$(function () {
+		
+		showData("todaydata");
+		fivePrediction();
+		onePrediction()
+	
+	};
+	</script>
+	<script>
+		function showData(mark) {
 			var links = ""
 			var company = document.getElementById('stock-select').value
-     	 	if(document.getElementById('info1').className){
-     	 		links = 'http://104.224.139.178:8000/api/onedaystock/?name='+company;
+     	 	if(mark=="todaydata"){
+     	 		links = 'http://127.0.0.1:8000/api/onedaystock/?name='+company;
      	 	}
      		else{
-          		links = 'http://104.224.139.178:8000/api/oneyearstock/?format=json&name='+company;
+          		links = 'http://127.0.0.1:8000/api/oneyearstock/?format=json&name='+company;
           	}
-
-
+      
+          	
 		    $.getJSON(links, function (data) {
 		        // Create the chart
 		    var res = [];
@@ -356,19 +377,23 @@
                 [1, 2, 3, 4, 6]
             	]],
 		        name = data[0]["name"];
-
-		        if(document.getElementById('info2').className=="active"){
+		        //console.log(document.getElementById('info2').className);
+		        //console.log(document.getElementById('info1').className);
+		        //console.log(links);
+		        if(mark=="hisdata"){
 		        	for (var i=data.length-1;i>=0;i--){
-			          var info = data[i];
+			          var info = data[i]; 
 			          var time = info["time"];
 			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
 			          res.push([t, info["open"], info["close"], info["high"], info["low"]]);
 			          volume.push([t, info["volume"]]);
+			          console.log("history");
 		        	}
 		    	}
 		        else{
+		        	console.log("today");
 		        	for (var i=data.length-1;i>=0;i--){
-			          var info = data[i];
+			          var info = data[i]; 
 			          var time = info["time"];
 			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,10)
 			          	, time.substring(11,13), time.substring(14,16), time.substring(17,19));
@@ -376,114 +401,121 @@
 			          volume.push([t, info["volume"]]);
 		        	}
 		        }
-
+		        
 		       res.sort();
 		       volume.sort();
 		       if(document.getElementById('info2').className=="active"){
 		       		createChart();
-		       }
+		       } 
 		       else{
 		       		createChart2();
 		       }
 		function createChart() {
-
-		$('#information-container').highcharts('StockChart', {
-
-			chart : {
-                type: 'area',
-				events : {
-					load : function () {
-
-						// set up the updating of the chart each second
-						var series = this.series[0];
-						setInterval(function () {
-							var x = (new Date()).getTime(), // current time
-									y = Math.round(Math.random() * 100);
-							series.addPoint([x, y], true, true);
-						}, 1000);
-					}
-				}
-			},
-
-			rangeSelector: {
-				buttons: [{
-					count: 1,
-					type: 'minute',
-					text: '1M'
-				}, {
-					count: 5,
-					type: 'minute',
-					text: '5M'
-				}, {
-					type: 'all',
-					text: 'All'
-				}],
-				inputEnabled: false,
-				selected: 0
-			},
-
-			exporting: {
-				enabled: false
-			},
-			title: {
-                text: name+' Historical'
-            },
-
-            yAxis: [{
-                labels: {
+            var adv_options = {
+                legend: {
+                    enabled: true,
+                    layout: 'vertical',
                     align: 'right',
-                    x: -3
+                    verticalAlign: 'middle',
+                    borderWidth: 0,
+                    showInLegend: true
                 },
-                title: {
-                    text: 'OHLC'
+                indicators: [{
+                    id: name,
+                    type: 'sma',
+                    params: {
+                        period: 15
+                    },
+                    showInLegend:true
+                }, {
+                    id: name,
+                    type: 'ema',
+                    params: {
+                        period: 40,
+                        index: 0 //optional parameter for ohlc / candlestick / arearange - index of value
+                    },
+                    styles: {
+                        strokeWidth: 2,
+                        stroke: 'green',
+                        dashstyle: 'solid'
+                    },
+                    showInLegend:true
+                }],
+                yAxis: [{
+                    labels: {
+                        align: 'right',
+                        x: -3
+                    },
+                    title: {
+                        text: 'OHLC'
+                    },
+                    height: '60%',
+                    lineWidth: 2
+                }, {
+                    labels: {
+                        align: 'right',
+                        x: -3
+                    },
+                    title: {
+                        text: 'Volume'
+                    },
+                    top: '65%',
+                    height: '35%',
+                    offset: 0,
+                    lineWidth: 2
+                }],
+                rangeSelector: {
+                    buttons: [{
+                        count: 1,
+                        type: 'week',
+                        text: 'w'
+                    }, {
+                        count: 1,
+                        type: 'month',
+                        text: 'm'
+                    }, {
+                        type: 'all',
+                        text: 'All'
+                    }],
+                    inputEnabled: false,
+                    selected: 2
                 },
-                height: '60%',
-                lineWidth: 2
-            }, {
-                labels: {
-                    align: 'right',
-                    x: -3
+                tooltip: {
+                    enabledIndicators: true
                 },
-                title: {
-                    text: 'Volume'
-                },
-                top: '65%',
-                height: '35%',
-                offset: 0,
-                lineWidth: 2
-            }],
-            legend: {
-                enabled: true,
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle',
-                borderWidth: 0
-            },
-			series: [{
-                type: 'candlestick',
-                id: 'primary',
-                name: 'AAPL',
-                data: res,
-                dataGrouping: {
-                    units: groupingUnits
-                }
-            }, {
+                series: [{
+                    cropThreshold: 0,
+                    id: name,
+                    name: name,
+                    data: [],
+                    tooltip: {
+                        valueDecimals: 2
+                    },
+                    dataGrouping: {
+                        units: groupingUnits
+                    }
+                },{
+                    type: 'column',
+                    name: 'Volume',
+                    data: volume,
+                    yAxis: 1,
+                    dataGrouping: {
+                        units: groupingUnits
+                    }
+                }]
+            };
 
-                type: 'column',
-                name: 'Volume',
-                data: volume,
-                yAxis: 1,
-                dataGrouping: {
-                    units: groupingUnits
-                }
-            }]
-		});
+            adv_options.series[0].type = 'candlestick';
+            adv_options.series[0].data = res;
+
+            $('#information-container').highcharts('StockChart', adv_options);
+
 	  }
 
 	  function createChart2() {
-
+          
 		$('#information-container').highcharts('StockChart', {
-
+			
 
             title : {
                 text : 'AAPL Stock Price'
@@ -491,22 +523,22 @@
             xAxis: {
                 type: 'datetime'
             },
-
+    
             yAxis: {
                 title : {
                     text : 'Price'
                 }
             },
-
+        
             tooltip: {
                 crosshairs: true,
                 shared: true
             },
-
+            
 			rangeSelector : {
 				selected : 1
 			},
-
+    
             legend: {
                 enabled: true,
                 layout: 'vertical',
@@ -514,7 +546,7 @@
                 verticalAlign: 'middle',
                 borderWidth: 0
             },
-
+    
             plotOptions: {
                 series: {
                     marker: {
@@ -528,16 +560,14 @@
                 type : 'line',
                 id: 'primary',
                 data : res,
-                tooltip: {
-                    valueDecimals: 2
-                }
+                
             },{
                 name: '15-day SMA',
                 linkedTo: 'primary',
                 showInLegend: true,
                 type: 'trendline',
                 algorithm: 'linear',
-
+                
             }, {
                 name: '15-day SMA',
                 linkedTo: 'primary',
@@ -546,20 +576,48 @@
                 algorithm: 'SMA',
                 periods: 15
             }, {
-                name: '40-day SMA',
+                name: '40-day EMA',
                 linkedTo: 'primary',
                 showInLegend: true,
                 type: 'trendline',
-                algorithm: 'SMA',
-                periods: 40
+                algorithm: 'EMA',
+                periods: 15
             }]
 		});
 	  }
 
 	});
-});
+};
+	</script>
+	<script>
+		function onePrediction() {
+			
+			var company = document.getElementById('stock-select').value
+			var svm = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=SVM&days=1";
+			var bayes = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=Bayesian&days=1";
+		$.getJSON(svm, function (data1){
+		$.getJSON(bayes, function (data2){
+		res1 = [];
+		res2 = [];	
+		
+		for (var i=data1.length-1;i>=0;i--){
+			          var info = data1[i]; 
+			          var time = info["time"];
+			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
+			          res1.push([t, info["pirce"]]);
+			          
+		        	}	
+		res1.sort();
 
-		$(function () {
+		for (var i=data2.length-1;i>=0;i--){
+			          var info = data2[i]; 
+			          var time = info["time"];
+			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
+			          res2.push([t, info["pirce"]]);
+			          
+		        	}
+		res2.sort();
+		
 		$('#1day-prediction-container').highcharts({
 			chart: {
 				type: 'column'
@@ -575,17 +633,35 @@
 			},
 			series: [{
 				name: 'SVM',
-				data: [5]
+				data: [res1[res1.length-1][1]]
 			}, {
 				name: 'Naive Bayesian',
-				data: [2]
-			}, {
-				name: 'Neural Network',
-				data: [3]
+				data: [res2[res1.length-1][1]]
 			}]
 		});
+	 });
 	});
-	$(function () {
+	}
+	</script>
+	<script>
+		function fivePrediction() {
+		var res = [];
+		var company = document.getElementById('stock-select').value
+		var ann = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=ANN&days=5";
+		$.getJSON(ann, function (data){
+		for (var i=data.length-1;i>=0;i--){
+			          var info = data[i]; 
+			          var time = info["time"];
+			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
+			          res.push([t, info["pirce"]]);
+			          
+		        	}
+		res.sort();
+		var final = [];
+		for(var i = res.length-1;i>=res.length-5;i--){
+			final.push(res[i])
+		}	
+		
 		$('#5days-prediction-container').highcharts({
 			chart: {
 				type: 'spline'
@@ -627,31 +703,7 @@
 				// Define the data points. All series have a dummy year
 				// of 1970/71 in order to be compared on the same x axis. Note
 				// that in JavaScript, months start at 0 for January, 1 for February etc.
-				data: [
-					[Date.UTC(1970, 9, 21), 0],
-					[Date.UTC(1970, 10, 4), 0.28],
-					[Date.UTC(1970, 10, 9), 0.25],
-					[Date.UTC(1970, 10, 27), 0.2],
-					[Date.UTC(1970, 11, 2), 0.28],
-				]
-			}, {
-				name: 'Naive Bayesian',
-				data: [
-					[Date.UTC(1970, 9, 29), 0],
-					[Date.UTC(1970, 10, 9), 0.4],
-					[Date.UTC(1970, 11, 1), 0.25],
-					[Date.UTC(1971, 0, 1), 1.66],
-					[Date.UTC(1971, 0, 10), 1.8],
-				]
-			}, {
-				name: 'Neural Network',
-				data: [
-					[Date.UTC(1970, 10, 25), 0],
-					[Date.UTC(1970, 11, 6), 0.25],
-					[Date.UTC(1970, 11, 20), 1.41],
-					[Date.UTC(1970, 11, 25), 1.64],
-					[Date.UTC(1971, 0, 4), 1.6],
-				]
+				data: final
 			}]
 		});
 	});

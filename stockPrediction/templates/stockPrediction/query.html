@@ -38,11 +38,11 @@
 
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <ul class="nav menu">
-        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-stats"></span> Stock Prediction</a></li>
-        <li><a href="widgets.html"><span class="glyphicon glyphicon-tasks"></span> stock manage</a></li>
+        <li><a href="/stockPrediction/stockPrediction/"><span class="glyphicon glyphicon-stats"></span> Stock Prediction</a></li>
+        <li class="active"><a href="widgets.html"><span class="glyphicon glyphicon-tasks"></span> stock manage</a></li>
         <li><a href="charts.html"><span class="glyphicon glyphicon-user"></span> user info</a></li>
         <li role="presentation" class="divider"></li>
-        <li><a href="login.html"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+        <li><a href="/stockPrediction/login/"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
     </ul>
 </div><!--/.sidebar-->
 
@@ -55,28 +55,39 @@
     </div><!--/.row-->
 
     <div class="row row-margin-top">
-        <div class="col-xs-12 col-md-6">
-            <div class="col-md-6 panel-widget">
+        <div class="col-xs-12 col-md-9">
+            <div class="col-md-5 panel-widget">
                 <div class="row no-padding">
                     <div class="col-lg-12 widget-right">
-                        <div class="large">SELECT THE STOCK</div>
+                        <div class="large">SELECT THE QUERY</div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <select id = "stock-select"  class="form-control">
-                    <option>YHOO</option>
-                    <option>APPL</option>
-                    <option>MICRO</option>
-                    <option>GOOG</option>
+                    <option value="1">Show the list of all companies in the database along with their latest stock price</option>
+                    <option value="2">Get the highest stock price of Google in the last ten days</option>
+                    <option value="3">Average stock price of Microsoft in the latest one year</option>
+                    <option value="4">Lowest stock price for each company in the latest one year</option>
+                    <option value="5">List the ids of companies along with their name who have the average stock price lesser than the lowest of Google in the latest one year</option>
                 </select>
             </div>
         </div>
-        <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-lg btn-outline pull-right margin">REFRESH</button>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-default btn-lg btn-outline pull-right margin" onclick="getQuery(this.form)">Get the result</button>
         </div>
-
     </div>
+    <div class="row row-margin-top">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Query result</div>
+                <div id = 'div' class="panel-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+
 
 
 
@@ -92,9 +103,92 @@
 <script src="{{STACTIC_URL}}/static/js/bootstrap-datepicker.js"></script>
 <script src="{{STACTIC_URL}}/static/js/custom.js"></script>
 <script>
-    window.onload = function(){
+    function getQuery(form){
+  document.getElementById('div').innerHTML = ""
+  
+  
+      // 使用 $("<table></table>") 生成一个 table
+ 
+        var link = ""
+        var val = document.getElementById('stock-select').value
+        if(val == '1'){
+          link = 'http://127.0.0.1:8000/api/latestOneyearstock/?format=json'
+        }
+        if(val == '2'){
+          link = 'http://127.0.0.1:8000/api/highestLastnDays/?name=GOOG&day=10 '
+        }
+        if(val == '3'){
+          link = 'http://127.0.0.1:8000/api/average/?name=MSFT'
+        }
+        if(val == '4'){
+          link = 'http://127.0.0.1:8000/api/lowest/'
+        } 
+        if(val == '5'){
+          link = 'http://127.0.0.1:8000/api/lessthan/?name=GOOG'
+        } 
+    $.getJSON(link, function (data) {
+      var tab = $("<table border='1' class='table table-hover bootstrap-table'></table>");
+        // 3 行循环3次
+        var row = $("<tr></tr>");
+        if(val == '1'||val=='2'){
+            row.append($("<td>" + "id" + "</td>"));
+        row.append($("<td>" + "name" + "</td>"));
+        row.append($("<td>" + "time" + "</td>"));
+        row.append($("<td>" + "open" + "</td>"));
+        row.append($("<td>" + "close" + "</td>"));
+        row.append($("<td>" + "high" + "</td>"));
+        row.append($("<td>" + "low" + "</td>"));
+        row.append($("<td>" + "volume" + "</td>"));
+        tab.append(row);
+        
+        for(var i = 0; i < data.length; i++){
+            row = $("<tr></tr>");
+            
+            row.append($("<td>" + data[i]["id"] + "</td>"));
+            row.append($("<td>" + data[i]["name"] + "</td>"));
+            row.append($("<td>" + data[i]["time"] + "</td>"));
+            row.append($("<td>" + data[i]["open"] + "</td>"));
+            row.append($("<td>" + data[i]["close"] + "</td>"));
+            row.append($("<td>" + data[i]["high"] + "</td>"));
+            row.append($("<td>" + data[i]["low"] + "</td>"));
+            row.append($("<td>" + data[i]["volume"] + "</td>"));
+            tab.append(row);
+        }
+        
+        }
+        else if(val == '3' || val == '4'){
+            row.append($("<td>" + "name" + "</td>"));
+            row.append($("<td>" + "price" + "</td>"));
+            tab.append(row);
+        
+        for(var i = 0; i < data.length; i++){
+            row = $("<tr></tr>"); 
+            row.append($("<td>" + data[i]["name"] + "</td>"));
+            row.append($("<td>" + data[i]["price"] + "</td>"));
+            tab.append(row);
+        }
+    }
+        else if(val == '5'){
+            row.append($("<td>" + "id" + "</td>"));
+            row.append($("<td>" + "name" + "</td>"));
+            tab.append(row);
+        
+        for(var i = 0; i < data.length; i++){
+            row = $("<tr></tr>"); 
+            row.append($("<td>" + data[i]["id"] + "</td>"));
+            row.append($("<td>" + data[i]["name"] + "</td>"));
+            tab.append(row);
+        }
+    }
+        $("#div").append(tab);
+    }
+    );
 
-    };
+ 
+        
+  
+
+}
 </script>
 </body>
 
