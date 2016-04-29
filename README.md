@@ -57,6 +57,10 @@ we use [django rest framework](http://www.django-rest-framework.org) to define a
     (10)oneyearstock
     http://127.0.0.1:8000/api/oneyearstock/?name=YHOO
     
+    (11)lesserthan
+    http://127.0.0.1:8000/api/lessthan/?name=YHOO
+    
+    
 ##2.prediction api:  
 in api/prediction:  
 
