@@ -28,37 +28,37 @@
 we use [django rest framework](http://www.django-rest-framework.org) to define api  
   
 	(1) Show the list of all companies in the database along with their latest stock price.  
-	http://127.0.0.1:8000/api/latestOneyearstock/  
+	http://104.224.139.178:8000/api/latestOneyearstock/  
 	
 	(2) Get the highest stock price of Google in the last ten days  
-	http://127.0.0.1:8000/api/highestLastnDays/?name=GOOG&day=10    
+	http://104.224.139.178:8000/api/highestLastnDays/?name=GOOG&day=10    
 	
 	(3) Average stock price of Microsoft in the latest one year  
-	http://127.0.0.1:8000/api/average/?name=YHOO  
+	http://104.224.139.178:8000/api/average/?name=YHOO  
 	
 	(4)Lowest stock price for each company in the latest one year  
-	http://127.0.0.1:8000/api/lowest/  
+	http://104.224.139.178:8000/api/lowest/  
 	
 	(5)indicators  
-	http://127.0.0.1:8000/api/indicator/?name=YHOO&indicator=xxx&timescale=xxx  
+	http://104.224.139.178:8000/api/indicator/?name=YHOO&indicator=xxx&timescale=xxx  
 	
 	(6)daystockPrediction  
-	http://127.0.0.1:8000/api/dayPrediction/?name=YHOO&strategy=xxx&days=5  
+	http://104.224.139.178:8000/api/dayPrediction/?name=YHOO&strategy=xxx&days=5  
 	
 	(7)minstockPrediction  
-	http://127.0.0.1:8000/api/minPrediction/?name=YHOO&strategy=xxx&minutes=5  
+	http://104.224.139.178:8000/api/minPrediction/?name=YHOO&strategy=xxx&minutes=5  
 
     (8)realtime query
-    http://127.0.0.1:8000/api/realTime/?name=YHOO
+    http://104.224.139.178:8000/api/realTime/?name=YHOO
     
     (9)onedaystock
-    http://127.0.0.1:8000/api/onedaystock/?name=YHOO
+    http://104.224.139.178:8000/api/onedaystock/?name=YHOO
     
     (10)oneyearstock
-    http://127.0.0.1:8000/api/oneyearstock/?name=YHOO
+    http://104.224.139.178:8000/api/oneyearstock/?name=YHOO
     
     (11)lesserthan
-    http://127.0.0.1:8000/api/lessthan/?name=YHOO
+    http://104.224.139.178:8000/api/lessthan/?name=YHOO
     
     
 ##2.prediction api:  
