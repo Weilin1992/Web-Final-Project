@@ -27,12 +27,12 @@ class RunProgram(object):
 		sql = "create database if not exists Stock"
 		self.cursor.execute(sql);
 		self.cursor.execute("use Stock");
-		sql = "create table if not exists stockPrediction_Company\
+		sql = "create table if not exists stockPrediction_company\
 				(id MEDIUMINT NOT NULL AUTO_INCREMENT,\
 				name varchar(10) not null,\
 				primary key(id))"
 		self.cursor.execute(sql);
-		sql = "create table if not exists stockPrediction_oneYearStock\
+		sql = "create table if not exists stockPrediction_oneyearstock\
 				(id MEDIUMINT NOT NULL AUTO_INCREMENT,\
 				name varchar(10) not null, \
 				time Date not null,\
@@ -43,7 +43,7 @@ class RunProgram(object):
 				volume double not null,\
 				primary key(id))"
 		self.cursor.execute(sql);
-		sql = "create table if not exists stockPrediction_oneDayStock\
+		sql = "create table if not exists stockPrediction_onedaystock\
 				(id MEDIUMINT NOT NULL AUTO_INCREMENT,\
 				name varchar(10) not null,\
 				time DateTime not null,\
@@ -55,13 +55,13 @@ class RunProgram(object):
 
 	def initializeComppany(self):
 		for name in self.company_name:
-			sql = "select * from stockPrediction_Company\
+			sql = "select * from stockPrediction_company\
 				where name = '%s'" % (name);
 			result = self.cursor.execute(sql);
 			if(result == 0):
-				sql = "insert into stockPrediction_Company(name) values('%s')" %(name);
+				sql = "insert into stockPrediction_company(name) values('%s')" %(name);
 				self.sqlImplement(sql);
-		print ("finish initialize stockPrediction_Company table");
+		print ("finish initialize stockPrediction_company table");
 
 	def initializeOneYear(self):
 		self.today = date.today() - timedelta(days = 1);
@@ -72,7 +72,7 @@ class RunProgram(object):
 			for ret in result:
 				name = ret['Symbol']
 				day = ret['Date']
-				sql = "select * from stockPrediction_oneYearStock\
+				sql = "select * from stockPrediction_oneyearstock\
 						where name = '%s' and time = '%s'" %(name,day)
 				reaction = self.cursor.execute(sql)
 				if reaction == 0:
@@ -81,10 +81,10 @@ class RunProgram(object):
 					Volume = ret["Volume"]
 					High = ret["High"]
 					Low = ret['Low']
-					sql = "insert into stockPrediction_oneYearStock(name,time,open,close,high,low,volume) values('%s','%s','%s','%s','%s','%s','%s')" %(name,day,Open,Close,High,Low,Volume)
+					sql = "insert into stockPrediction_oneyearstock(name,time,open,close,high,low,volume) values('%s','%s','%s','%s','%s','%s','%s')" %(name,day,Open,Close,High,Low,Volume)
 					self.sqlImplement(sql);
 			#draw the previous year's rsi and sma
-		print ("finish initialize  stockPrediction_oneYearStock table");
+		print ("finish initialize  stockPrediction_oneyearstock table");
 	def getData(self):
 		print ("program start");
 		self.now  = datetime.now() - timedelta(minutes = 1);
@@ -95,18 +95,18 @@ class RunProgram(object):
 					stock = Share(name)
 					price = stock.get_price()
 					volume = stock.get_volume()
-					sql = "insert into stockPrediction_oneDayStock(name,time,price,volume) values('%s','%s','%s','%s')" % (str(name),str(self.now),str(price),str(volume))
+					sql = "insert into stockPrediction_onedaystock(name,time,price,volume) values('%s','%s','%s','%s')" % (str(name),str(self.now),str(price),str(volume))
 					self.sqlImplement(sql);
 				time.sleep(50);
 			if datetime.now().hour > 16:
 				#print 'aa';
-				sql = "truncate table stockPrediction_oneDayStock";
+				sql = "truncate table stockPrediction_onedaystock";
 				self.sqlImplement(sql);
 				while self.today == date.today():
 					print ""
 				self.today = date.today();
 				for name in self.company_name:
-					sql = "delete from stockPrediction_oneYearStock\
+					sql = "delete from stockPrediction_oneyearstock\
 							where time = '%s' and name = '%s" %(self.oneYearBefore, name);
 					self.sqlImplement(sql);
 					stock = Share(name);
@@ -115,7 +115,7 @@ class RunProgram(object):
 					High = stock.get_days_high();
 					Low = stock.get_days_low();
 					Close = stock.get_prev_close();
-					sql = "insert into stockPrediction_oneYearStock(name,time,open,close,high,low,volume) values('%s','%s','%s','%s','%s','%s','%s')" %(str(name),str(self.today),str(Open),str(Close),str(High),str(Low),str(Volume));
+					sql = "insert into stockPrediction_oneyearstock(name,time,open,close,high,low,volume) values('%s','%s','%s','%s','%s','%s','%s')" %(str(name),str(self.today),str(Open),str(Close),str(High),str(Low),str(Volume));
 					self.sqlImplement(sql);
 				self.oneYearBefore = self.today - timedelta(days = 365);
 run = RunProgram();
@@ -164,7 +164,7 @@ run = RunProgram();
 
 
 
-#sql = "select * from stockPrediction_oneYearStock into outfile 'E:\\stockPrediction_oneYearStock.txt\
+#sql = "select * from stockPrediction_oneyearstock into outfile 'E:\\stockPrediction_oneyearstock.txt\
 #		fields terminated by ',' enclosed by '""'\
 #		lines terminated by '\r\n'";
 #sqlImplement(sql, self.cursor);
@@ -175,16 +175,16 @@ run = RunProgram();
 
 if flag:
 	for name in company_name:
-		tmp = ('stockPrediction_oneDayStock_%s' +'.csv') %(name);
-		stockPrediction_oneDayStock = file(tmp, 'wb');
-		writer = csv.writer(stockPrediction_oneDayStock, dialect = 'excel');
+		tmp = ('stockPrediction_onedaystock_%s' +'.csv') %(name);
+		stockPrediction_onedaystock = file(tmp, 'wb');
+		writer = csv.writer(stockPrediction_onedaystock, dialect = 'excel');
 		writer.writerow(['name', 'time', 'price', 'volume']);
-		sql = "select * from stockPrediction_oneDayStock where name = '%s'" %(str(name));
+		sql = "select * from stockPrediction_onedaystock where name = '%s'" %(str(name));
 		self.cursor.execute(sql);
 		res = self.cursor.fetchall();
 		for row in res:
 			writer.writerow(row);
-		stockPrediction_oneDayStock.close();
+		stockPrediction_onedaystock.close();
 
 print ('finish');
 self.db.close();
