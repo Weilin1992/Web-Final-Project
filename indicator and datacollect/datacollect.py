@@ -2,13 +2,9 @@ import MySQLdb
 from yahoo_finance import Share
 from datetime import datetime,date,timedelta
 import time;
-#import csv;
-#import msvcrt;
-
-
 class RunProgram(object):
 	def __init__(self):
-		self.company_name = ["YHOO","GOOG","FB","AMZN","MSFT", "BAC", "AAPL", "V","BX","BA"];
+		self.company_name = ["YHOO","GOOG","FB","AMZN","MSFT","BAC", "AAPL","V","BX","BA"];
 		self.openTime = datetime.now().replace(hour = 9, minute = 30, second = 0);
 		self.closeTime = datetime.now().replace(hour = 16, minute = 0, second = 0);
 		self.createTable();
@@ -69,7 +65,9 @@ class RunProgram(object):
 		for name in self.company_name:
 			stock = Share(name);
 			result = stock.get_historical(str(self.oneYearBefore),str(self.today));
-			for ret in result:
+			length = len(result);
+			for i in range(length):
+				ret = result[length - i -1];
 				name = ret['Symbol']
 				day = ret['Date']
 				sql = "select * from stockPrediction_oneyearstock\
@@ -83,7 +81,6 @@ class RunProgram(object):
 					Low = ret['Low']
 					sql = "insert into stockPrediction_oneyearstock(name,time,open,close,high,low,volume) values('%s','%s','%s','%s','%s','%s','%s')" %(name,day,Open,Close,High,Low,Volume)
 					self.sqlImplement(sql);
-			#draw the previous year's rsi and sma
 		print ("finish initialize  stockPrediction_oneyearstock table");
 	def getData(self):
 		print ("program start");
@@ -97,17 +94,20 @@ class RunProgram(object):
 					volume = stock.get_volume()
 					sql = "insert into stockPrediction_onedaystock(name,time,price,volume) values('%s','%s','%s','%s')" % (str(name),str(self.now),str(price),str(volume))
 					self.sqlImplement(sql);
-				time.sleep(50);
+				time.sleep(60);
 			if datetime.now().hour > 16:
-				#print 'aa';
 				sql = "truncate table stockPrediction_onedaystock";
 				self.sqlImplement(sql);
-				while self.today == date.today():
-					print ""
-				self.today = date.today();
+				while self.today == (date.today() - timedelta(days = 1)):
+					time.sleep(3600);
+				sql = "truncate table stockPrediction_oneyearstock";
+				self.initializeOneYear();
+				while self.openTime > datetime.now():
+					sleep(60);
+					'''
 				for name in self.company_name:
-					sql = "delete from stockPrediction_oneyearstock\
-							where time = '%s' and name = '%s" %(self.oneYearBefore, name);
+
+					sql = "delete from stockPrediction_oneyearstock where time = '%s' and name = '%s" %(self.oneYearBefore, name);
 					self.sqlImplement(sql);
 					stock = Share(name);
 					Open = stock.get_open();
@@ -117,7 +117,9 @@ class RunProgram(object):
 					Close = stock.get_prev_close();
 					sql = "insert into stockPrediction_oneyearstock(name,time,open,close,high,low,volume) values('%s','%s','%s','%s','%s','%s','%s')" %(str(name),str(self.today),str(Open),str(Close),str(High),str(Low),str(Volume));
 					self.sqlImplement(sql);
+
 				self.oneYearBefore = self.today - timedelta(days = 365);
+				'''
 run = RunProgram();
 
 
