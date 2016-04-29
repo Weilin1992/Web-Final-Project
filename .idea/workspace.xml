@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24ea74c9-2889-436c-aea4-e821604e0427" name="Default" comment="">
+    <list default="true" id="24ea74c9-2889-436c-aea4-e821604e0427" name="Default" comment="ml fixed">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/machinel.py" afterPath="$PROJECT_DIR$/api/machinel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/prediction.py" afterPath="$PROJECT_DIR$/api/prediction.py" />
     </list>
     <ignored path="Final_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,20 +36,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="machinel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="machinel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/machinel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.296296">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="10" />
+            <state vertical-scroll-proportion="1.1188811">
+              <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1461953620000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-                <marker date="1461953620000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-                <marker date="1461953620000" expanded="true" signature="2831:2901" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-                <marker date="1461953620000" expanded="true" signature="3951:4018" placeholder="select missi... stockPrediction_oneyearstock" />
-                <marker date="1461953620000" expanded="true" signature="4673:4740" placeholder="select missi... stockPrediction_oneyearstock" />
-                <marker date="1461953620000" expanded="true" signature="5373:5440" placeholder="select missi... stockPrediction_oneyearstock" />
+                <marker date="1461956888000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+                <marker date="1461956888000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+                <marker date="1461956888000" expanded="true" signature="2830:2900" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+                <marker date="1461956888000" expanded="true" signature="3950:4017" placeholder="select missi... stockPrediction_oneyearstock" />
+                <marker date="1461956888000" expanded="true" signature="4672:4739" placeholder="select missi... stockPrediction_oneyearstock" />
+                <marker date="1461956888000" expanded="true" signature="5372:5439" placeholder="select missi... stockPrediction_oneyearstock" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.0">
+              <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -68,10 +78,11 @@
         <entry file="file://$PROJECT_DIR$/api/prediction.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <marker date="1461952035000" expanded="true" signature="1568:1625" placeholder="select * fro... stockPrediction_onedaystock" />
-                <marker date="1461952035000" expanded="true" signature="2498:2555" placeholder="select * fro... stockPrediction_onedaystock" />
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1461956335000" expanded="true" signature="1774:1831" placeholder="select * fro... stockPrediction_onedaystock" />
+                <marker date="1461956335000" expanded="true" signature="2704:2761" placeholder="select * fro... stockPrediction_onedaystock" />
               </folding>
             </state>
           </provider>
@@ -116,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stockPrediction.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stockPrediction.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4074074">
-              <caret line="598" column="14" selection-start-line="598" selection-start-column="14" selection-end-line="598" selection-end-column="14" />
+            <state vertical-scroll-proportion="-2.9411764">
+              <caret line="342" column="30" selection-start-line="342" selection-start-column="30" selection-end-line="342" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -197,9 +208,9 @@
         <option value="$PROJECT_DIR$/stockPrediction/views.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/indicator and datacollect/datacollect.py" />
+        <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
         <option value="$PROJECT_DIR$/api/prediction.py" />
         <option value="$PROJECT_DIR$/api/machinel.py" />
-        <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
       </list>
     </option>
   </component>
@@ -761,7 +772,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461952683217</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ml fixed">
+      <created>1461954486883</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1461954486883</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1109,13 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.958334">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Final_Project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.037037">
@@ -1201,14 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1230,38 +1232,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <marker date="1461952035000" expanded="true" signature="1568:1625" placeholder="select * fro... stockPrediction_onedaystock" />
-            <marker date="1461952035000" expanded="true" signature="2498:2555" placeholder="select * fro... stockPrediction_onedaystock" />
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1461956335000" expanded="true" signature="1774:1831" placeholder="select * fro... stockPrediction_onedaystock" />
+            <marker date="1461956335000" expanded="true" signature="2704:2761" placeholder="select * fro... stockPrediction_onedaystock" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/machinel.py">
+    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.296296">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1461953620000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-            <marker date="1461953620000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-            <marker date="1461953620000" expanded="true" signature="2831:2901" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-            <marker date="1461953620000" expanded="true" signature="3951:4018" placeholder="select missi... stockPrediction_oneyearstock" />
-            <marker date="1461953620000" expanded="true" signature="4673:4740" placeholder="select missi... stockPrediction_oneyearstock" />
-            <marker date="1461953620000" expanded="true" signature="5373:5440" placeholder="select missi... stockPrediction_oneyearstock" />
-          </folding>
+        <state vertical-scroll-proportion="-25.0">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4074074">
-          <caret line="598" column="14" selection-start-line="598" selection-start-column="14" selection-end-line="598" selection-end-column="14" />
+        <state vertical-scroll-proportion="-2.9411764">
+          <caret line="342" column="30" selection-start-line="342" selection-start-column="30" selection-end-line="342" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/machinel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1188811">
+          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1461956888000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+            <marker date="1461956888000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+            <marker date="1461956888000" expanded="true" signature="2830:2900" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+            <marker date="1461956888000" expanded="true" signature="3950:4017" placeholder="select missi... stockPrediction_oneyearstock" />
+            <marker date="1461956888000" expanded="true" signature="4672:4739" placeholder="select missi... stockPrediction_oneyearstock" />
+            <marker date="1461956888000" expanded="true" signature="5372:5439" placeholder="select missi... stockPrediction_oneyearstock" />
+          </folding>
         </state>
       </provider>
     </entry>

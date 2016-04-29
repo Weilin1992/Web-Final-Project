@@ -77,7 +77,7 @@ def ANN(name, attr):
 	for e in range(len(x)):
 		ds.addSample(x[e], y[e])
 	trainer = BackpropTrainer(net, ds)
-	for i in range(150):
+	for i in range(50):
 		trainer.train()
 	error = 0
 	count = 0

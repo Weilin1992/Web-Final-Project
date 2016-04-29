@@ -2,7 +2,10 @@ import collections
 from stockPrediction.models import *
 from .machinel import *
 from django.db import connection
+import json
 
+def date_handler(obj):
+    return obj.isoformat() if hasattr(obj, 'isoformat') else obj
 
 def daystockPrediction(company_name,strategy,days):
     """
@@ -30,6 +33,10 @@ def daystockPrediction(company_name,strategy,days):
     rowlist = getRows(strategy, company_name, 'close')
 #    print rowlist
     #print "SVM"
+
+    with open(company_name+".json",'w') as f:
+        f.write(json.dumps(rowlist,default=date_handler))
+
     return rowlist
 
 def minstockPrediction(company_name,strategy,minutes):
