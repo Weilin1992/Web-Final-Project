@@ -160,7 +160,8 @@ def getRows(s, n, attr):
         print d
         r = [d]
 
-        return (r + rowlist)
+        #return (r + rowlist)
+        return r
 
     if s == 'Bayesian':
         cursor = connection.cursor()
@@ -181,7 +182,8 @@ def getRows(s, n, attr):
         print rowlist[0]["time"]
         d["time"] = date.today() + interval
         r = [d]
-        return r + rowlist
+        #return r + rowlist
+        return r;
 
     if s == 'ANN':
         cursor = connection.cursor()
@@ -195,11 +197,12 @@ def getRows(s, n, attr):
             d["time"] = row[2]
             rowlist.append(d)
         result = ANN(n, attr)
+        rowlist = []
         for i in range(len(result[0])):
             d = collections.OrderedDict()
             d["name"] = n
             d["price"] = result[0][i]
-            interval = timedelta(1)
+            interval = timedelta(i + 1)
             d["time"] = date.today() + interval
             r = [d]
             rowlist = r + rowlist

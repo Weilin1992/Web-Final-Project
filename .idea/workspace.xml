@@ -4,10 +4,6 @@
     <list default="true" id="24ea74c9-2889-436c-aea4-e821604e0427" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/machinel.py" afterPath="$PROJECT_DIR$/api/machinel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/prediction.py" afterPath="$PROJECT_DIR$/api/prediction.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/login.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/register_success.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/register_success.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
     </list>
     <ignored path="Final_Project.iws" />
@@ -40,19 +36,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="machinel.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="machinel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/machinel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93449783">
-              <caret line="181" column="41" selection-start-line="181" selection-start-column="41" selection-end-line="181" selection-end-column="41" />
+            <state vertical-scroll-proportion="-5.296296">
+              <caret line="38" column="10" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="10" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1461952521000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-                <marker date="1461952521000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-                <marker date="1461952521000" expanded="true" signature="2831:2901" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-                <marker date="1461952521000" expanded="true" signature="3951:4018" placeholder="select missi... stockPrediction_oneyearstock" />
-                <marker date="1461952521000" expanded="true" signature="4655:4722" placeholder="select missi... stockPrediction_oneyearstock" />
-                <marker date="1461952521000" expanded="true" signature="5336:5403" placeholder="select missi... stockPrediction_oneyearstock" />
+                <marker date="1461953620000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+                <marker date="1461953620000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+                <marker date="1461953620000" expanded="true" signature="2831:2901" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+                <marker date="1461953620000" expanded="true" signature="3951:4018" placeholder="select missi... stockPrediction_oneyearstock" />
+                <marker date="1461953620000" expanded="true" signature="4673:4740" placeholder="select missi... stockPrediction_oneyearstock" />
+                <marker date="1461953620000" expanded="true" signature="5373:5440" placeholder="select missi... stockPrediction_oneyearstock" />
               </folding>
             </state>
           </provider>
@@ -117,6 +113,16 @@
           </provider>
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stockPrediction.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4074074">
+              <caret line="598" column="14" selection-start-line="598" selection-start-column="14" selection-end-line="598" selection-end-column="14" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -189,11 +195,11 @@
         <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/register.html" />
         <option value="$PROJECT_DIR$/Final_Project/settings.py" />
         <option value="$PROJECT_DIR$/stockPrediction/views.py" />
-        <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/indicator and datacollect/datacollect.py" />
         <option value="$PROJECT_DIR$/api/prediction.py" />
         <option value="$PROJECT_DIR$/api/machinel.py" />
+        <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
       </list>
     </option>
   </component>
@@ -246,6 +252,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Final_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stockPrediction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Final_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stockPrediction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stockPrediction" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -713,7 +755,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461950532157</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="ml fixed">
+      <created>1461952683217</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1461952683217</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -731,15 +779,15 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31421646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2369863" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33606556" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3369863" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -785,7 +833,8 @@
     <MESSAGE value="change host name in readme.md" />
     <MESSAGE value="add our website in readme.md" />
     <MESSAGE value="database change" />
-    <option name="LAST_COMMIT_MESSAGE" value="database change" />
+    <MESSAGE value="ml fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="ml fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1097,14 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="30" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1202,17 +1243,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/machinel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93449783">
-          <caret line="181" column="41" selection-start-line="181" selection-start-column="41" selection-end-line="181" selection-end-column="41" />
+        <state vertical-scroll-proportion="-5.296296">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="10" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1461952521000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-            <marker date="1461952521000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-            <marker date="1461952521000" expanded="true" signature="2831:2901" placeholder="SELECT missi... stockPrediction_oneyearstock" />
-            <marker date="1461952521000" expanded="true" signature="3951:4018" placeholder="select missi... stockPrediction_oneyearstock" />
-            <marker date="1461952521000" expanded="true" signature="4655:4722" placeholder="select missi... stockPrediction_oneyearstock" />
-            <marker date="1461952521000" expanded="true" signature="5336:5403" placeholder="select missi... stockPrediction_oneyearstock" />
+            <marker date="1461953620000" expanded="true" signature="500:570" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+            <marker date="1461953620000" expanded="true" signature="1532:1602" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+            <marker date="1461953620000" expanded="true" signature="2831:2901" placeholder="SELECT missi... stockPrediction_oneyearstock" />
+            <marker date="1461953620000" expanded="true" signature="3951:4018" placeholder="select missi... stockPrediction_oneyearstock" />
+            <marker date="1461953620000" expanded="true" signature="4673:4740" placeholder="select missi... stockPrediction_oneyearstock" />
+            <marker date="1461953620000" expanded="true" signature="5373:5440" placeholder="select missi... stockPrediction_oneyearstock" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4074074">
+          <caret line="598" column="14" selection-start-line="598" selection-start-column="14" selection-end-line="598" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

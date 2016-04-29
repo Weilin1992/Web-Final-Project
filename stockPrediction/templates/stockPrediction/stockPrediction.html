@@ -348,8 +348,9 @@
 		});
 		
 		showData("todaydata");
+        onePrediction();
 		fivePrediction();
-		onePrediction()
+
 	
 	};
 	</script>
@@ -595,29 +596,33 @@
 			var company = document.getElementById('stock-select').value
 			var svm = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=SVM&days=1";
 			var bayes = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=Bayesian&days=1";
+            //console.log(svm);
 		$.getJSON(svm, function (data1){
 		$.getJSON(bayes, function (data2){
 		res1 = [];
 		res2 = [];	
 		
-		for (var i=data1.length-1;i>=0;i--){
-			          var info = data1[i]; 
+//console.log(data1)
+            //console.log(data2)
+			          var info = data1[0];
 			          var time = info["time"];
 			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
-			          res1.push([t, info["pirce"]]);
+			          res1.push([t, info["price"]]);
 			          
-		        	}	
-		res1.sort();
 
-		for (var i=data2.length-1;i>=0;i--){
-			          var info = data2[i]; 
-			          var time = info["time"];
-			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
-			          res2.push([t, info["pirce"]]);
+
+
+
+			          var info2 = data2[0];
+			          var time2 = info2["time"];
+			          var t2 = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
+			          res2.push([t2, info2["price"]]);
 			          
-		        	}
-		res2.sort();
-		
+
+
+		//console.log(info)
+            //console.log(res2)
+            //console.log(res2[res2.length-2][1])
 		$('#1day-prediction-container').highcharts({
 			chart: {
 				type: 'column'
@@ -648,20 +653,22 @@
 		var res = [];
 		var company = document.getElementById('stock-select').value
 		var ann = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=ANN&days=5";
+            //console.log(ann);
 		$.getJSON(ann, function (data){
 		for (var i=data.length-1;i>=0;i--){
 			          var info = data[i]; 
 			          var time = info["time"];
 			          var t = Date.UTC(time.substring(0,4), time.substring(5,7), time.substring(8,time.length));
-			          res.push([t, info["pirce"]]);
+			          res.push([t, info["price"]]);
 			          
 		        	}
-		res.sort();
+
 		var final = [];
 		for(var i = res.length-1;i>=res.length-5;i--){
 			final.push(res[i])
-		}	
-		
+		}
+            console.log("haha")
+		console.log(final)
 		$('#5days-prediction-container').highcharts({
 			chart: {
 				type: 'spline'
