@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="24ea74c9-2889-436c-aea4-e821604e0427" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
     </list>
     <ignored path="Final_Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -133,8 +133,8 @@
       <file leaf-file-name="query.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6296296">
-              <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="57" column="29" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -810,7 +810,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461958375738</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="finalddd">
+      <created>1461958450218</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1461958450218</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1315,8 +1321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6296296">
-          <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="57" column="29" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="29" />
           <folding />
         </state>
       </provider>

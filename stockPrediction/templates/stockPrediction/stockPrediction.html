@@ -359,10 +359,10 @@
 			var links = ""
 			var company = document.getElementById('stock-select').value
      	 	if(mark=="todaydata"){
-     	 		links = 'http://104.224.139.178/:8000/api/onedaystock/?name='+company;
+     	 		links = 'http://104.224.139.178:8000/api/onedaystock/?name='+company;
      	 	}
      		else{
-          		links = 'http://104.224.139.178/:8000/api/oneyearstock/?format=json&name='+company;
+          		links = 'http://104.224.139.178:8000/api/oneyearstock/?format=json&name='+company;
           	}
       
           	
@@ -607,8 +607,8 @@
 		function onePrediction() {
 			
 			var company = document.getElementById('stock-select').value
-			var svm = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=SVM&days=1";
-			var bayes = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=Bayesian&days=1";
+			var svm = "http://104.224.139.178:8000/api/dayPrediction/?name="+company+"&strategy=SVM&days=1";
+			var bayes = "http://104.224.139.178:8000/api/dayPrediction/?name="+company+"&strategy=Bayesian&days=1";
             //console.log(svm);
 		$.getJSON(svm, function (data1){
 		$.getJSON(bayes, function (data2){
@@ -665,7 +665,7 @@
 		function fivePrediction() {
 		var res = [];
 		var company = document.getElementById('stock-select').value
-		var ann = "http://127.0.0.1:8000/api/dayPrediction/?name="+company+"&strategy=ANN&days=5";
+		var ann = "http://104.224.139.178:8000/api/dayPrediction/?name="+company+"&strategy=ANN&days=5";
             //console.log(ann);
 		$.getJSON(ann, function (data){
 		for (var i=data.length-1;i>=0;i--){
