@@ -112,19 +112,19 @@
         var link = ""
         var val = document.getElementById('stock-select').value
         if(val == '1'){
-          link = 'http://127.0.0.1:8000/api/latestOneyearstock/?format=json'
+          link = 'http://104.224.139.178:8000/api/latestOneyearstock/?format=json'
         }
         if(val == '2'){
-          link = 'http://127.0.0.1:8000/api/highestLastnDays/?name=GOOG&day=10 '
+          link = 'http://104.224.139.178:8000/api/highestLastnDays/?name=GOOG&day=10 '
         }
         if(val == '3'){
-          link = 'http://127.0.0.1:8000/api/average/?name=MSFT'
+          link = 'http://104.224.139.178:8000/api/average/?name=MSFT'
         }
         if(val == '4'){
-          link = 'http://127.0.0.1:8000/api/lowest/'
+          link = 'http://104.224.139.178:8000/api/lowest/'
         } 
         if(val == '5'){
-          link = 'http://127.0.0.1:8000/api/lessthan/?name=GOOG'
+          link = 'http://104.224.139.178:8000/api/lessthan/?name=GOOG'
         } 
     $.getJSON(link, function (data) {
       var tab = $("<table border='1' class='table table-hover bootstrap-table'></table>");
