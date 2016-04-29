@@ -9,7 +9,7 @@ class RunProgram(object):
 	def __init__(self):
 		self.company_name = ["YHOO","GOOG","FB","AMZN","MSFT","BAC", "AAPL","V","BX","BA"];
 		self.openTime = datetime.now().replace(hour = 9, minute = 30, second = 0);
-		self.closeTime = datetime.now().replace(hour = 16, minute = 0, second = 0);
+		self.closeTime = datetime.now().replace(hour = 18, minute = 0, second = 0);
 		self.createTable();
 		self.initializeComppany();
 		self.initializeOneYear();
@@ -99,7 +99,7 @@ class RunProgram(object):
 					sql = "insert into stockPrediction_onedaystock(name,time,price,volume) values('%s','%s','%s','%s')" % (str(name),str(self.now),str(price),str(volume))
 					self.sqlImplement(sql);
 				time.sleep(60 - (time.time() - start_time));
-			if datetime.now().hour > 16:
+			if datetime.now().hour > 18:
 				sql = "truncate table stockPrediction_onedaystock";
 				self.sqlImplement(sql);
 				while self.today == (date.today() - timedelta(days = 1)):

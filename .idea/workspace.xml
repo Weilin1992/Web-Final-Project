@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="24ea74c9-2889-436c-aea4-e821604e0427" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/indicator and datacollect/datacollect.py" afterPath="$PROJECT_DIR$/indicator and datacollect/datacollect.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" afterPath="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
     </list>
     <ignored path="Final_Project.iws" />
@@ -48,6 +49,26 @@
                 <marker date="1461957590000" expanded="true" signature="3950:4017" placeholder="select missi... stockPrediction_oneyearstock" />
                 <marker date="1461957590000" expanded="true" signature="4672:4739" placeholder="select missi... stockPrediction_oneyearstock" />
                 <marker date="1461957590000" expanded="true" signature="5372:5439" placeholder="select missi... stockPrediction_oneyearstock" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datacollect.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/indicator and datacollect/datacollect.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2631579">
+              <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1461959476000" expanded="true" signature="896:1044" placeholder="create table... if" />
+                <marker date="1461959476000" expanded="true" signature="1083:1400" placeholder="create table... if" />
+                <marker date="1461959476000" expanded="true" signature="1439:1677" placeholder="create table... if" />
+                <marker date="1461959476000" expanded="true" signature="1815:1875" placeholder="select * fro... stockPrediction_company" />
+                <marker date="1461959476000" expanded="true" signature="1956:2010" placeholder="insert into stockPrediction_company... " />
+                <marker date="1461959476000" expanded="true" signature="2526:2609" placeholder="select * fro... stockPrediction_oneyearstock" />
+                <marker date="1461959476000" expanded="true" signature="2821:2942" placeholder="insert into stockPrediction_oneyearstock... " />
+                <marker date="1461959476000" expanded="true" signature="3522:3613" placeholder="insert into stockPrediction_onedaystock... " />
               </folding>
             </state>
           </provider>
@@ -123,28 +144,22 @@
       <file leaf-file-name="stockPrediction.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="369" column="35" selection-start-line="369" selection-start-column="35" selection-end-line="369" selection-end-column="35" />
-              <folding />
+            <state vertical-scroll-proportion="-8.235294">
+              <caret line="388" column="48" selection-start-line="388" selection-start-column="48" selection-end-line="388" selection-end-column="48" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="query.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="query.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
+            <state vertical-scroll-proportion="-2.6470587">
               <caret line="57" column="29" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -210,11 +225,11 @@
         <option value="$PROJECT_DIR$/Final_Project/settings.py" />
         <option value="$PROJECT_DIR$/stockPrediction/views.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/indicator and datacollect/datacollect.py" />
         <option value="$PROJECT_DIR$/api/prediction.py" />
         <option value="$PROJECT_DIR$/api/machinel.py" />
         <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html" />
         <option value="$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html" />
+        <option value="$PROJECT_DIR$/indicator and datacollect/datacollect.py" />
       </list>
     </option>
   </component>
@@ -816,7 +831,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461958450218</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="finalddd">
+      <created>1461958541267</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1461958541267</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1220,24 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indicator and datacollect/datacollect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1461950522000" expanded="true" signature="896:1044" placeholder="create table... if" />
-            <marker date="1461950522000" expanded="true" signature="1083:1400" placeholder="create table... if" />
-            <marker date="1461950522000" expanded="true" signature="1439:1677" placeholder="create table... if" />
-            <marker date="1461950522000" expanded="true" signature="1815:1875" placeholder="select * fro... stockPrediction_company" />
-            <marker date="1461950522000" expanded="true" signature="1956:2010" placeholder="insert into stockPrediction_company... " />
-            <marker date="1461950522000" expanded="true" signature="2526:2609" placeholder="select * fro... stockPrediction_oneyearstock" />
-            <marker date="1461950522000" expanded="true" signature="2821:2942" placeholder="insert into stockPrediction_oneyearstock... " />
-            <marker date="1461950522000" expanded="true" signature="3522:3613" placeholder="insert into stockPrediction_onedaystock... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1311,19 +1314,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
+    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="369" column="35" selection-start-line="369" selection-start-column="35" selection-end-line="369" selection-end-column="35" />
+        <state vertical-scroll-proportion="-2.6470587">
+          <caret line="57" column="29" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/query.html">
+    <entry file="file://$PROJECT_DIR$/stockPrediction/templates/stockPrediction/stockPrediction.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="-8.235294">
+          <caret line="388" column="48" selection-start-line="388" selection-start-column="48" selection-end-line="388" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indicator and datacollect/datacollect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2631579">
+          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1461959476000" expanded="true" signature="896:1044" placeholder="create table... if" />
+            <marker date="1461959476000" expanded="true" signature="1083:1400" placeholder="create table... if" />
+            <marker date="1461959476000" expanded="true" signature="1439:1677" placeholder="create table... if" />
+            <marker date="1461959476000" expanded="true" signature="1815:1875" placeholder="select * fro... stockPrediction_company" />
+            <marker date="1461959476000" expanded="true" signature="1956:2010" placeholder="insert into stockPrediction_company... " />
+            <marker date="1461959476000" expanded="true" signature="2526:2609" placeholder="select * fro... stockPrediction_oneyearstock" />
+            <marker date="1461959476000" expanded="true" signature="2821:2942" placeholder="insert into stockPrediction_oneyearstock... " />
+            <marker date="1461959476000" expanded="true" signature="3522:3613" placeholder="insert into stockPrediction_onedaystock... " />
+          </folding>
         </state>
       </provider>
     </entry>
