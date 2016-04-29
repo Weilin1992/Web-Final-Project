@@ -55,18 +55,18 @@
       <file leaf-file-name="datacollect.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/indicator and datacollect/datacollect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.1409001">
-              <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.44204322">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1461927987000" expanded="true" signature="840:988" placeholder="create table... if" />
-                <marker date="1461927987000" expanded="true" signature="1027:1344" placeholder="create table... if" />
-                <marker date="1461927987000" expanded="true" signature="1383:1621" placeholder="create table... if" />
-                <marker date="1461927987000" expanded="true" signature="1759:1819" placeholder="select * fro... stockPrediction_company" />
-                <marker date="1461927987000" expanded="true" signature="1900:1954" placeholder="insert into stockPrediction_company... " />
-                <marker date="1461927987000" expanded="true" signature="2470:2553" placeholder="select * fro... stockPrediction_oneyearstock" />
-                <marker date="1461927987000" expanded="true" signature="2765:2886" placeholder="insert into stockPrediction_oneyearstock... " />
-                <marker date="1461927987000" expanded="true" signature="3406:3497" placeholder="insert into stockPrediction_onedaystock... " />
+                <marker date="1461950522000" expanded="true" signature="896:1044" placeholder="create table... if" />
+                <marker date="1461950522000" expanded="true" signature="1083:1400" placeholder="create table... if" />
+                <marker date="1461950522000" expanded="true" signature="1439:1677" placeholder="create table... if" />
+                <marker date="1461950522000" expanded="true" signature="1815:1875" placeholder="select * fro... stockPrediction_company" />
+                <marker date="1461950522000" expanded="true" signature="1956:2010" placeholder="insert into stockPrediction_company... " />
+                <marker date="1461950522000" expanded="true" signature="2526:2609" placeholder="select * fro... stockPrediction_oneyearstock" />
+                <marker date="1461950522000" expanded="true" signature="2821:2942" placeholder="insert into stockPrediction_oneyearstock... " />
+                <marker date="1461950522000" expanded="true" signature="3522:3613" placeholder="insert into stockPrediction_onedaystock... " />
               </folding>
             </state>
           </provider>
@@ -718,7 +718,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461906554404</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="database change">
+      <created>1461928062574</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1461928062574</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -736,15 +742,15 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30936995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2369863" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2636612" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26438355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -789,7 +795,8 @@
     <MESSAGE value="change host name" />
     <MESSAGE value="change host name in readme.md" />
     <MESSAGE value="add our website in readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="add our website in readme.md" />
+    <MESSAGE value="database change" />
+    <option name="LAST_COMMIT_MESSAGE" value="database change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1199,18 +1206,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/indicator and datacollect/datacollect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1409001">
-          <caret line="107" column="24" selection-start-line="107" selection-start-column="24" selection-end-line="107" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.44204322">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1461927987000" expanded="true" signature="840:988" placeholder="create table... if" />
-            <marker date="1461927987000" expanded="true" signature="1027:1344" placeholder="create table... if" />
-            <marker date="1461927987000" expanded="true" signature="1383:1621" placeholder="create table... if" />
-            <marker date="1461927987000" expanded="true" signature="1759:1819" placeholder="select * fro... stockPrediction_company" />
-            <marker date="1461927987000" expanded="true" signature="1900:1954" placeholder="insert into stockPrediction_company... " />
-            <marker date="1461927987000" expanded="true" signature="2470:2553" placeholder="select * fro... stockPrediction_oneyearstock" />
-            <marker date="1461927987000" expanded="true" signature="2765:2886" placeholder="insert into stockPrediction_oneyearstock... " />
-            <marker date="1461927987000" expanded="true" signature="3406:3497" placeholder="insert into stockPrediction_onedaystock... " />
+            <marker date="1461950522000" expanded="true" signature="896:1044" placeholder="create table... if" />
+            <marker date="1461950522000" expanded="true" signature="1083:1400" placeholder="create table... if" />
+            <marker date="1461950522000" expanded="true" signature="1439:1677" placeholder="create table... if" />
+            <marker date="1461950522000" expanded="true" signature="1815:1875" placeholder="select * fro... stockPrediction_company" />
+            <marker date="1461950522000" expanded="true" signature="1956:2010" placeholder="insert into stockPrediction_company... " />
+            <marker date="1461950522000" expanded="true" signature="2526:2609" placeholder="select * fro... stockPrediction_oneyearstock" />
+            <marker date="1461950522000" expanded="true" signature="2821:2942" placeholder="insert into stockPrediction_oneyearstock... " />
+            <marker date="1461950522000" expanded="true" signature="3522:3613" placeholder="insert into stockPrediction_onedaystock... " />
           </folding>
         </state>
       </provider>

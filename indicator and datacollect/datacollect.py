@@ -2,6 +2,9 @@ import MySQLdb
 from yahoo_finance import Share
 from datetime import datetime,date,timedelta
 import time;
+from googlefinance import getQuotes
+import ystockquote
+
 class RunProgram(object):
 	def __init__(self):
 		self.company_name = ["YHOO","GOOG","FB","AMZN","MSFT","BAC", "AAPL","V","BX","BA"];
@@ -87,14 +90,15 @@ class RunProgram(object):
 		self.now  = datetime.now() - timedelta(minutes = 1);
 		while True:
 			if self.openTime < datetime.now() <= self.closeTime and datetime.now().minute != self.now.minute:
+				start_time = time.time();
 				self.now = datetime.now()
 				for name in self.company_name:
-					stock = Share(name)
-					price = stock.get_price()
-					volume = stock.get_volume()
+					tmpdict = getQuotes(name);
+					price = tmpdict[0]['LastTradePrice'];
+					volume = ystockquote.get_volume(name);
 					sql = "insert into stockPrediction_onedaystock(name,time,price,volume) values('%s','%s','%s','%s')" % (str(name),str(self.now),str(price),str(volume))
 					self.sqlImplement(sql);
-				time.sleep(60);
+				time.sleep(60 - (time.time() - start_time));
 			if datetime.now().hour > 16:
 				sql = "truncate table stockPrediction_onedaystock";
 				self.sqlImplement(sql);
