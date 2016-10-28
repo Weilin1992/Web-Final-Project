@@ -26,7 +26,7 @@
 
 ##1.api: Django rest framework:
   
-we use [django rest framework](http://www.django-rest-framework.org) to define api  
+we use [django rest framework](http://www.django-rest-framework.org) to define api parameters are after "?"
   
 	(1) Show the list of all companies in the database along with their latest stock price.  
 	http://104.224.139.178:8000/api/latestOneyearstock/  
