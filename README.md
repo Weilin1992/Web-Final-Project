@@ -1,5 +1,5 @@
 # Web-Final-Project
-
+##-2.this readme is only for group communication
 ## -1.our website:
     http://104.224.139.178:8000/stockPrediction/ (out of date now)
 
