@@ -1,7 +1,7 @@
 # Web-Final-Project
 
 ## -1.our website:
-    http://104.224.139.178:8000/stockPrediction/stockPrediction
+    http://104.224.139.178:8000/stockPrediction/ (out of date now)
 
 ##0.setup:
 
